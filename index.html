@@ -5,9 +5,60 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>JS_ObjectDataType_&_DOM</title>
         <link rel="stylesheet" href="./css/style.css">
+        <script>
+
+        </script>
     </head>
     <body>
         
-        
+
+        <script>
+            //Lets create a JS Object
+            //There are two members of JS object.
+            //1. P:V
+            //2. Function
+
+            var student1 = {
+                //1. Property:value,
+                //2. Function
+                fname:"Prabhat",
+                lname:"Singh",
+                age:"27",
+                salary:"40000",
+                address:"New Delhi",
+                qualifiction:"M.com",
+                //1. Function Definition
+                /*getMyFullAddres(){
+                    console.log("Hello form Student1");
+                }*/
+                getMyFullAddres(){
+                    //Every function return something
+                    console.log("Hello "+this.fname+' '+this.lname+` How r u?`); //"this" is a reference to internal js object.
+                }
+
+            } //Student1 is a type of Js Object.
+            var student2 = 'Prabhat Singh from New Delhi'; //Student2 is a type of String.  
+            var student3 = 40; //Student3 is a type of Number.
+            var student4 = {
+                //1. Property:value,
+                //2. Function
+                fname:"Raju",
+                age:"27",
+                salary:"30000",
+                address:"New Delhi",
+                qualifiction:"B.sc.",
+                getAddress(){
+                    //Every Function Return Something
+                    return this.address //"this" is a reference to internal js object.
+                }
+            }
+
+            //How can i access these information form JS Object.
+            //member.property
+            console.log(student1.fname); // . is a member selection operator.
+            console.log(student1.getMyFullAddres()); // . is a member selection operator.
+            console.log(student4.getAddress()); // . is a member selection operator.
+        </script>
+        <script src="./js/script.js"></script>
     </body>
 </html>
